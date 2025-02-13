@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.72.0">
+
+    <title>Gizmo Galaxy</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/product/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Link to external stylesheet -->
+     <link rel="stylesheet" href="styles.css"> <!--Adjust the path if necessary -->
+    
+    
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body text-center p-5">
+                        <!-- Success Icon -->
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Order Success Message -->
+                        <h2 class="mb-4">Order Complete!</h2>
+                        <p class="text-muted mb-4">Thank you for your purchase. We've received your order.</p>
+
+                        <!-- Order Details -->
+                        <div class="card bg-light mb-4">
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col text-start">Order ID:</div>
+                                    <div class="col text-end" id="orderId"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-start">Total Amount:</div>
+                                    <div class="col text-end">
+                                        <strong id="total"></strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <button class="btn btn-outline-secondary me-2" onclick="emailReceipt()">
+                            Email Receipt
+                        </button>
+                        <button class="btn btn-outline-secondary me-2" onclick="window.print()">
+                            Print Receipt
+                        </button>
+                        <a href="index.html" class="btn btn-primary">
+                            Continue Shopping
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Order Complete Page -->
+    <script src="order-complete.js"></script>
+
+
+</body>
+</html>

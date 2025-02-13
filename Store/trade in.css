@@ -1,0 +1,173 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #f1eded);
+    background-position-x: center;
+
+}
+/*Stylesheet styles.css*/
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.navbar-logo {
+    height: 26px; /* Adjust as needed */
+    width: auto;  /* Keeps the aspect ratio of the logo */
+    display: block;
+    margin: 0 auto; /* Centers the logo horizontally */
+}
+
+.navbar-logo:hover {
+    opacity: 0.8; /* Optional: Adds a hover effect to the logo */
+}
+/* Site header links */
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 5px 0px; /* Uniform padding */
+    font-size: 15px;
+}
+
+.site-header a {
+    color: #80ccbb;
+    margin: 0 45px; /* Add uniform margin to links */
+    text-decoration: none; 
+    transition: color .15s ease-in-out;
+  }
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/*navbar*/
+
+
+.trade-in-form-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trade-in-form-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.trade-in-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.trade-in-form-container label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.trade-in-form-container small {
+    font-size: 12px;
+    color: #666;
+}
+
+.trade-in-form-container select, 
+.trade-in-form-container input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.trade-in-form-container button {
+    background-color: #09896d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.trade-in-form-container button:hover {
+    background-color: #138985;
+}
+
+#tradeInEstimate {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Footer styles */
+footer {
+    border-top: 1px solid #eaeaea;
+    padding: 20px 0;
+}
+
+.contact-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-right: 37px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: right;
+}
+
+.contact-icon {
+    height: 30px;
+    width: auto;
+    margin-right: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.contact-icon:hover {
+    opacity: 0.7;
+}
+.note {
+
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.trade-in-btn {
+    background-color: #80cc93;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 5px;
+    cursor: pointer;
+   
+}
+
+.trade-in-btn:hover {
+    background-color: #66bd82;
+}

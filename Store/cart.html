@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.72.0">
+
+    <title>Gizmo Galaxy</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/product/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Link to external stylesheet -->
+     <link rel="stylesheet" href="styles.css"> <!--Adjust the path if necessary -->
+    
+    
+    
+</head>
+
+
+<body>
+
+    <section id="header">
+        <nav class="site-header sticky-top py-1">
+            <div class="container d-flex flex-column flex-md-row justify-content-between">
+                <!-- Replace SVG with an image for the logo -->
+                <a class="py-2" href="#" aria-label="Product">
+                    <img src="img/logo.png" alt="Logo" class="navbar-logo">
+                </a>
+                <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+                <a class="py-2 d-none d-md-inline-block" href="Shop.html">Shop</a>
+                <a class="py-2 d-none d-md-inline-block" href="about.html">About Us</a>
+                <a class="py-2 d-none d-md-inline-block" href="trade in.html">Trade-in</a>
+                <a class="py-2 d-none d-md-inline-block" href="sign in.html">Sign In</a>
+                <a class="py-2 d-none d-md-inline-block" href="cart.html">Cart</a>
+            </div>
+        </nav>
+    </section>
+
+
+    <div class="container py-5">
+        <!-- Shopping Cart Section -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Cart Items</h5>
+                    </div>
+                    <div class="card-body">
+                         <!-- This is where cart items will be dynamically generated -->
+                        <div class="cart-items">
+                        <!-- JavaScript will populate cart items here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Order Summary Section -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Order Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Shipping</span>
+                            <span id="shipping">$10.00</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-4">
+                            <strong>Total</strong>
+                            <strong id="total">$10.00</strong>
+                        </div>
+                        <a href="order-complete.html">
+                            <button id="checkout-button" class="btn btn-primary w-100">Complete Order</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                document.getElementById('checkout-button').addEventListener('click', function() {
+                    // Get the total without the $ sign
+                    const total = document.getElementById('total').textContent.replace('$', '').trim();
+                    
+                    // Save to sessionStorage
+                    sessionStorage.setItem('orderTotal', total);
+                    
+                    // Redirect to order complete page
+                    window.location.href = 'order-complete.html';
+                });
+            </script>
+    
+        <!-- Shipping Information -->
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Shipping Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="state" class="form-label">State</label>
+                                    <select class="form-select" id="state" required>
+                                        <option value="">Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="zip" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="zip" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Information Section -->
+<div class="row mt-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Payment Information</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="cardName" class="form-label">Name on Card</label>
+                        <input type="text" class="form-control" id="cardName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" 
+                               placeholder="1234 5678 9012 3456" 
+                               maxlength="19" required>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="expiryDate" class="form-label">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiryDate" 
+                                   placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" 
+                                   placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="saveCard">
+                            <label class="form-check-label" for="saveCard">
+                                Save this card for future purchases
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <footer class="container py-5">
+        <div class="row justify-content-between align-items-center">
+            <!-- Copyright Section -->
+            <div class="col-md-6 text-center text-md-left">
+                <small class="text-muted">&copy; Copyright Gizmo Galaxy 2024</small>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="col-md-6 text-center text-md-right">
+                <h5 class="contact-title">Contact Us</h5>
+                <div class="contact-icons">
+                    <a href="mailto:contact@gismosgalaxy.com" target="_blank">
+                        <img src="img/mail.png" alt="Email" class="contact-icon">
+                    </a>
+                    <a href="https://www.instagram.com/gismosgalaxy" target="_blank" rel="noopener noreferrer">
+                        <img src="img/ig.png" alt="Instagram" class="contact-icon">
+                    </a>
+                    <a href="https://www.facebook.com/gismosgalaxy" target="_blank" rel="noopener noreferrer">
+                        <img src="img/fb.png" alt="Facebook" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ <!-- javascript script file link -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="cart.js" defer></script>
+
+</body>
+
+</html>

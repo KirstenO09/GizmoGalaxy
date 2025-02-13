@@ -1,0 +1,390 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #f1eded);
+    background-position-x: center;
+
+}
+/*Stylesheet styles.css*/
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.navbar-logo {
+    height: 26px; /* Adjust as needed */
+    width: auto;  /* Keeps the aspect ratio of the logo */
+    display: block;
+    margin: 0 auto; /* Centers the logo horizontally */
+}
+
+.navbar-logo:hover {
+    opacity: 0.8; /* Optional: Adds a hover effect to the logo */
+}
+/* Site header links */
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 5px 0px; /* Uniform padding */
+    font-size: 15px;
+}
+
+.site-header a {
+    color: #80ccbb;
+    margin: 0 45px; /* Add uniform margin to links */
+    text-decoration: none; 
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/*Header section mockup1 background*/
+
+.header-background {
+    background-image: url('img/mockup1.jpg');
+    background-size: 100%; /* Ensure the image covers the whole area */
+    height: 500px;
+    width: auto;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+}
+@media (min-width: 768px) {
+    .header-background {
+        height: 700px;
+        background-size: 100%; /* Adjust the background size on smaller screens */    
+    }
+}
+
+@media (max-width: 768px) {
+    .header-background {
+        background-size: 100%; /* Adjust the background size on smaller screens */    
+    }
+}
+
+
+/*Text transparent background*/
+.text-container {
+    background-color: rgba(255, 255, 255, 0.6); /* White with 80% opacity */
+    padding: 20px; /* Adds space inside the container */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+/* Optional: For smaller screens, adjust the background and padding */
+@media (max-width: 768px) {
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent */
+        padding: 15px;
+    }
+}
+
+/*custom background colors */
+.custom-color1 {
+    background-color: #5b6e83;
+}
+.custom-color2 {
+    background-color: #c9b6d4;
+}
+
+.custom-color3 {
+    background-color: #bad4f3;
+}
+.custom-color5 {
+    background-color: #bccce2;
+}
+.custom-color4 {
+    background-color: #bed8d0;
+}
+
+@import "../bootstrap";
+
+/*Adjust mockup2*/
+.custom-image2-container {
+    width: 50%;
+    height: 200px;
+    background-image: url('img/mockup2.jpeg');
+    background-repeat: no-repeat;
+    background-size: 120%; 
+    background-position-x: center;
+}
+
+@media (max-width: 768px) {
+    .custom-image2-container {
+        width: 80%; /* Expand image width on smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .custom-image2-container {
+        width: 40%; /* Reduce width on larger screens */
+        height: 300px; /* Slightly increase height on larger screens */
+        background-size: 115%; /* Ensure the image fits within the container */
+        padding-bottom: 45%;
+    }
+}
+
+/*Adjust mockup3*/
+.custom-image3-container {
+    width: 50%;
+    height: 300px;
+    background-image: url('img/mockup3.png');
+    background-repeat: no-repeat;
+    background-size: 120%; 
+    background-position-x: center;
+}
+
+@media (max-width: 768px) {
+    .custom-image3-container {
+        width: 80%; /* Expand image width on smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-image3-container {
+        width: 40%; /* Reduce width on larger screens */
+        height: 300px; /* Slightly increase height on larger screens */
+        background-size: 150%; /* Ensure the image fits within the container */
+        padding-bottom: 55%;
+    }
+}
+
+/*Adjust mockup4*/
+.custom-image4-container {
+    width: 70%;
+    height: 300px;
+    background-image: url('img/mockup4.png');
+    background-repeat: no-repeat;
+    background-size: 50%; 
+    background-position-x: center;
+}
+
+@media (max-width: 768px) {
+    .custom-image4-container {
+        width: 80%; /* Expand image width on smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-image4-container {
+        width: 40%; /* Reduce width on larger screens */
+        height: 300px; /* Slightly increase height on larger screens */
+        background-size: 85%; /* Ensure the image fits within the container */
+        padding-bottom: 55%;
+    }
+}
+
+/*Adjust mockup5*/
+.custom-image5-container {
+    width: 70%;
+    height: 300px;
+    background-image: url('img/mockup5.png');
+    background-repeat: no-repeat;
+    background-size: 55%; 
+    background-position-x: center;
+}
+
+@media (max-width: 768px) {
+    .custom-image5-container {
+        width: 80%; /* Expand image width on smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-image5-container {
+        width: 40%; /* Reduce width on larger screens */
+        height: 300px; /* Slightly increase height on larger screens */
+        background-size: 120%; /* Ensure the image fits within the container */
+        padding-bottom: 55%;
+    }
+}
+
+/*Adjust mockup6*/
+.custom-image6-container {
+    width: 60%;
+    height: 300px;
+    background-image: url('img/mockup6.webp');
+    background-repeat: no-repeat;
+    background-size: 55%; 
+    background-position-x: center;
+    background-position-y: 0px;
+}
+
+@media (max-width: 768px) {
+    .custom-image6-container {
+        width: 80%; /* Expand image width on smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+        background-size: contain;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-image6-container {
+        width: 40%; /* Reduce width on larger screens */
+        height: 300px; /* Slightly increase height on larger screens */
+        background-size: 130%; /* Ensure the image fits within the container */
+        padding-bottom: 55%;
+    }
+}
+
+/*Adjust mockup7*/
+.custom-image7-container {
+    width: 70%;
+    height: 300px;
+    background-image: url('img/mockup7.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-position-x: center;
+    background-position-y: 30px;
+}
+@media (max-width: 768px) {
+    .custom-image7-container {
+        width: 80%; /* Expand image width on smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-image7-container {
+        width: 60%; /* Reduce width on larger screens */
+        height: 400px; /* Slightly increase height on larger screens */
+        background-size: contain;/* Ensure the image fits within the container */
+    }
+}
+
+
+
+
+/*Adjust mockup8*/
+.custom-image8-container {
+    width: 70%;
+    height: 420px;
+    background-image: url('img/mockup8.png');
+    background-repeat: no-repeat;
+    background-size: 80%; 
+    background-position-x: center;    
+}
+
+@media (max-width: 768px) {
+    .custom-image8-container {
+        width: 0%; /* Expand image width on smaller screens */
+       
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-image8-container {
+        width: 60%; /* Reduce width on larger screens */
+        padding-bottom: 35%;
+
+    }
+}
+
+        /*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+        .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: #333;
+            border-radius: 21px;
+            transform: rotate(30deg);
+        }
+
+        .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 5px;
+        }
+
+        .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            background-color: #e5e5e5;
+        }
+
+
+        /*
+ * Extra utilities
+ */
+
+        .flex-equal>* {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal>* {
+                flex: 1;
+            }
+        }
+
+        /* Footer  */
+/* Footer styling */
+footer {
+    border-top: 1px solid #eaeaea;
+    padding: 20px 0;
+}
+
+.contact-title {
+    margin-bottom: 10px; /* Space below the title */
+    font-weight: bold; 
+    margin-right: 24px;  /* Make the title bold */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: right; /* Center the icons */
+}
+
+.contact-icon {
+    height: 30px; /* Adjust the size as necessary */
+    width: auto;  /* Keeps the aspect ratio */
+    margin-right: 15px  ; /* Space between icons */
+    transition: opacity 0.3s ease; /* Smooth transition for hover */
+}
+
+.contact-icon:hover {
+    opacity: 0.7; /* Adds a hover effect */
+}
+
+ 

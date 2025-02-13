@@ -1,0 +1,128 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #f1eded);
+    background-position-x: center;
+
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    font-size: 15px; /* Matches trade in.css */
+}
+
+.site-header a {
+    color: #80ccbb;
+    margin: 0 45px;
+    text-decoration: none;
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    height: 26px; /* Matches trade in.css */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.navbar-logo:hover {
+    opacity: 0.8;
+}
+
+/* Form container */
+.form-container {
+    background-color: #bde1b4;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+}
+
+/* Form box styling */
+.form-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form input fields */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #211717;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Vertical line separator */
+.separator {
+    font-size: 16px;
+    display: block;
+    padding-top: 100px;
+}
+
+/* Footer styles */
+footer {
+    border-top: 1px solid #eaeaea;
+    padding: 20px 0;
+}
+
+.contact-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-right: 37px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: right;
+}
+
+.contact-icon {
+    height: 30px;
+    width: auto;
+    margin-right: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.contact-icon:hover {
+    opacity: 0.7;
+}

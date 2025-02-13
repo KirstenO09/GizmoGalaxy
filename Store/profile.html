@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxygizmo Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body onload="loadProfileData(); loadCartItems();">
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#" aria-label="Product">
+                <img src="img/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+            <a class="py-2 d-none d-md-inline-block" href="shop.html">Shop</a>
+            <a class="py-2 d-none d-md-inline-block" href="about.html">About Us</a>
+            <a class="py-2 d-none d-md-inline-block" href="trade in.html">Trade-in</a>
+            <a class="py-2 d-none d-md-inline-block" href="sign in.html">Sign In</a>
+            <a class="py-2 d-none d-md-inline-block" href="cart.html">Cart</a>
+        </div>
+    </nav>
+    <script>
+        function loadProfileData() {
+            const fullName = localStorage.getItem("fullName");
+            const email = localStorage.getItem("email");
+
+            // Display the data if available
+            if (fullName) document.getElementById("name").value = fullName;
+            if (email) document.getElementById("email").value = email;
+        }
+
+        function signOut() {
+            // Clear the localStorage data
+            localStorage.removeItem("fullName");
+            localStorage.removeItem("email");
+
+            // Redirect to the sign-in page
+            window.location.href = "sign in.html";
+        }
+    </script>
+    <div class="profile-container container my-5">
+        <div class="row">
+            <!-- Profile Section -->
+            <div class="col-md-6 profile-section">
+                <h2>User Profile</h2>
+                <div class="profile-picture mb-3">
+                    <img id="profile-img" src="img/default-avatar.jpg" alt="Default Profile Picture" class="img-thumbnail" style="width:150px; height:150px;">
+                    <input type="file" id="upload-picture" onchange="previewImage(event)" class="form-control mt-2">
+                </div>
+                <div class="profile-info">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" class="form-control" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description:</label>
+                        <textarea id="description" placeholder="Write something about yourself..." class="form-control" rows="4"></textarea>
+                    </div>
+                    <!-- Button Container -->
+                    <div class="d-flex justify-content-between">
+                        <button onclick="saveProfileData()" class="btn btn-primary">Save Profile</button>
+                        <button onclick="signOut()" class="btn btn-danger">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item History Section -->
+            <div class="col-md-6 item-history-section">
+                <h3>Item History</h3>
+                <div class="item-history">
+                    <ul id="history-list" class="list-group">
+                        <!-- Cart items will be dynamically inserted here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+        function loadProfileData() {
+            const name = localStorage.getItem("profileName");
+            const email = localStorage.getItem("profileEmail");
+            const description = localStorage.getItem("profileDescription") || '';
+
+            if (name) document.getElementById("name").value = name;
+            if (email) document.getElementById("email").value = email;
+            document.getElementById("description").value = description;
+        }
+
+        function signOut() {
+            localStorage.clear();
+            alert("You have been signed out.");
+            window.location.href = "sign in.html";
+        }
+    </script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script>
+        // Function to preview profile image when uploaded
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                document.getElementById('profile-img').src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        // Function to save profile data to localStorage
+        function saveProfileData() {
+            const name = document.getElementById('name').value;
+            const description = document.getElementById('description').value;
+            
+            // Save to localStorage for persistence
+            localStorage.setItem('profileName', name);
+            localStorage.setItem('profileDescription', description);
+            alert("Profile data saved!");
+        }
+
+        // Function to load profile data from localStorage
+        function loadProfileData() {
+            const name = localStorage.getItem('profileName');
+            const email = localStorage.getItem('profileEmail');
+            const description = localStorage.getItem('profileDescription') || '';
+            
+            if (name) document.getElementById('name').value = name;
+            if (email) document.getElementById('email').value = email;
+            document.getElementById('description').value = description;
+        }
+
+        // Function to handle sign out
+        function signOut() {
+            // Clear all relevant data from localStorage
+            localStorage.removeItem('profileName');
+            localStorage.removeItem('profileEmail');
+            localStorage.removeItem('profileDescription');
+            localStorage.removeItem('purchaseHistory'); // If you want to clear purchase history on sign out
+            
+            // Redirect to sign-in page
+            window.location.href = 'sign in.html';
+        }
+
+        // Placeholder for loading cart items
+        function loadCartItems() {
+            // Implement your cart loading logic here
+        }
+    </script>
+</body>
+</html>
