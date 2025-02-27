@@ -10,7 +10,7 @@ Website Features:
 
 ~ User Authentication – Sign-up and sign-in functionality.
   
-~ User Profile – Manage account details.
+~ User Profile – View login credentials and order history.
   
 ~ About Us – Learn more about the platform.
   
@@ -30,6 +30,6 @@ This website was developed using:
   
 ~ PHP – Server-side processing.
   
-~ MySQL – Database management for user data and orders.
+~ MySQL/phpMyAdmin(XAMPP) – Database management for user, products, cart items, and order info.
 
 Gizmo Galaxy aims to deliver a smooth and intuitive shopping experience for electronics enthusiasts. 🚀
